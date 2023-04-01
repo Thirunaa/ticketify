@@ -25,7 +25,7 @@ const Venue = (props) => {
           console.log(show.errors);
           if (show.errors[0].status === "404") {
             setLoading(false);
-            navigate("/venues/page/1");
+            navigate("/ticketify/venues/page/1");
           }
         }
         setShowData(show);
@@ -33,7 +33,7 @@ const Venue = (props) => {
         console.log(show);
       } catch (e) {
         setErr(true);
-        navigate("/venues/page/1");
+        navigate("/ticketify/venues/page/1");
         console.log(e);
       }
     }
@@ -109,7 +109,7 @@ const Venue = (props) => {
               </p>
             </dl>
             <Button
-              to="/attractions/page/1"
+              to="/ticketify/attractions/page/1"
               onClick={(e) => {
                 e.preventDefault();
                 window.history.back();

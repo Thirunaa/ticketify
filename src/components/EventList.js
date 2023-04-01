@@ -76,7 +76,7 @@ const EventList = () => {
           //setLoading(false);
           setPrevPageFlag(false);
           setErr(true);
-          navigate("/events/page/1");
+          navigate("/ticketify/events/page/1");
           setErrMessage("404 - No data available for this page");
           throw new Error("404 - No data available for this page");
         }
@@ -85,7 +85,7 @@ const EventList = () => {
           setErr(true);
           setErrMessage("400 - Invalid page parameter. Redirecting to the first page");
           setPrevPageFlag(false);
-          navigate("/events/page/1");
+          navigate("/ticketify/events/page/1");
         }
         console.log(e);
       }
@@ -122,7 +122,7 @@ const EventList = () => {
       <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={event.id}>
         <Card className={classes.card} variant="outlined">
           <CardActionArea>
-            <Link to={`/events/${event.id}`}>
+            <Link to={`/ticketify/events/${event.id}`}>
               <CardMedia
                 className={classes.media}
                 component="img"
@@ -208,12 +208,12 @@ const EventList = () => {
           <ButtonGroup disableElevation variant="contained" color="secondary">
             {prevPageExists && (
               <Button>
-                <Link to={`/events/page/${pageId - 1}`}>PREVIOUS</Link>
+                <Link to={`/ticketify/events/page/${pageId - 1}`}>PREVIOUS</Link>
               </Button>
             )}
             {nextPageExists && (
               <Button>
-                <Link to={`/events/page/${pageId + 1}`}>NEXT</Link>
+                <Link to={`/ticketify/events/page/${pageId + 1}`}>NEXT</Link>
               </Button>
             )}
           </ButtonGroup>
@@ -241,14 +241,14 @@ const EventList = () => {
           <ButtonGroup disableElevation variant="contained" color="secondary">
             {prevPageExists && (
               <Button>
-                <Link role="button" to={`/events/page/${pageId - 1}`}>
+                <Link role="button" to={`/ticketify/events/page/${pageId - 1}`}>
                   PREVIOUS
                 </Link>
               </Button>
             )}
             {nextPageExists && (
               <Button>
-                <Link role="button" to={`/events/page/${pageId + 1}`}>
+                <Link role="button" to={`/ticketify/events/page/${pageId + 1}`}>
                   NEXT
                 </Link>
               </Button>

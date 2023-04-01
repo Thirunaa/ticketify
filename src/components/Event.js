@@ -38,7 +38,7 @@ const Event = (props) => {
           console.log(show.errors);
           if (show.errors[0].status === "404") {
             setLoading(false);
-            navigate("/events/page/1");
+            navigate("/ticketify/events/page/1");
           }
         }
         setShowData(show);
@@ -57,7 +57,7 @@ const Event = (props) => {
         console.log(show);
       } catch (e) {
         setErr(true);
-        navigate("/events/page/1");
+        navigate("/ticketify/events/page/1");
         console.log(e);
       }
     }
@@ -161,7 +161,7 @@ const Event = (props) => {
                       <Grid key={attraction.id}>
                         <Card className={classes.card} variant="outlined">
                           <CardActionArea>
-                            <Link to={`/attractions/${attraction.id}`}>
+                            <Link to={`/ticketify/attractions/${attraction.id}`}>
                               <CardMedia
                                 className={classes.media}
                                 component="img"
@@ -203,7 +203,7 @@ const Event = (props) => {
                       <Grid key={venue.id}>
                         <Card className={classes.card} variant="outlined">
                           <CardActionArea>
-                            <Link to={`/venues/${venue.id}`}>
+                            <Link to={`/ticketify/venues/${venue.id}`}>
                               <CardMedia
                                 className={classes.media}
                                 component="img"
@@ -232,7 +232,7 @@ const Event = (props) => {
               <br />
               <br />
               <Button
-                to="/events/page/1"
+                to="/ticketify/events/page/1"
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.back();

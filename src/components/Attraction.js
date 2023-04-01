@@ -41,7 +41,7 @@ const Attraction = (props) => {
           console.log(show.errors);
           if (show.errors[0].status === "404") {
             setLoading(false);
-            navigate("/attractions/page/1");
+            navigate("/ticketify/attractions/page/1");
           }
         }
         setShowData(show);
@@ -61,7 +61,7 @@ const Attraction = (props) => {
       } catch (e) {
         setErr(true);
         setErrMessage("No such attraction ID found - 404");
-        navigate("/attractions/page/1");
+        navigate("/ticketify/attractions/page/1");
         console.log(e);
       }
     }
@@ -246,7 +246,7 @@ const Attraction = (props) => {
                 </p>
               </dl>
               <Button
-                to="/attractions/page/1"
+                to="/ticketify/attractions/page/1"
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.back();

@@ -27,22 +27,22 @@ function App() {
 
             <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
               <Button variant="contained">
-                <Link className="link" to="/">
+                <Link className="link" to="/ticketify/">
                   Home
                 </Link>
               </Button>
               <Button variant="contained">
-                <Link className="link" to="/events/page/1">
+                <Link className="link" to="/ticketify/events/page/1">
                   Events
                 </Link>
               </Button>
               <Button variant="contained">
-                <Link className="link" to="/attractions/page/1">
+                <Link className="link" to="/ticketify/attractions/page/1">
                   Attractions
                 </Link>
               </Button>
               <Button variant="contained">
-                <Link className="link" to="/venues/page/1">
+                <Link className="link" to="/ticketify/venues/page/1">
                   Venues
                 </Link>
               </Button>
@@ -52,13 +52,13 @@ function App() {
           <br />
           <div className="App-body">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/venues/page/:pageId" element={<VenueList />} />
-              <Route path="/venues/:id" element={<Venue />} />
-              <Route path="/events/page/:pageId" element={<EventList />} />
-              <Route path="/events/:id" element={<Event />} />
-              <Route path="/attractions/page/:pageId" element={<AttractionList />} />
-              <Route path="/attractions/:id" element={<Attraction />} />
+              <Route path="/ticketify" element={<Home />} />
+              <Route path="/ticketify/venues/page/:pageId" element={<VenueList />} />
+              <Route path="/ticketify/venues/:id" element={<Venue />} />
+              <Route path="/ticketify/events/page/:pageId" element={<EventList />} />
+              <Route path="/ticketify/events/:id" element={<Event />} />
+              <Route path="/ticketify/attractions/page/:pageId" element={<AttractionList />} />
+              <Route path="/ticketify/attractions/:id" element={<Attraction />} />
               <Route path="*" element={<RouteNotFound />} />
             </Routes>
           </div>
